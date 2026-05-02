@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>close-wiki — Your AI tech lead, always available</title>
-  <meta name="description" content="close-wiki scans any repository into a portable SQLite knowledge store and gives every developer an LLM-powered tech lead they can ask anything — grounded in your actual codebase.">
+  <title>Rekipedia — Your AI tech lead, always available</title>
+  <meta name="description" content="Rekipedia scans any repository into a portable SQLite knowledge store and gives every developer an LLM-powered tech lead they can ask anything — grounded in your actual codebase.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -330,14 +330,14 @@
       <rect width="22" height="22" rx="5" fill="#5e6ad2"/>
       <path d="M6 7h10M6 11h7M6 15h9" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
     </svg>
-    close-wiki
+    rekipedia
   </a>
   <div class="nav-links">
     <a href="#features">Features</a>
     <a href="#commands">Commands</a>
     <a href="#install">Install</a>
     <a href="#download">Download</a>
-    <a href="https://github.com/unrealandychan/close-wiki-releases" target="_blank">GitHub</a>
+    <a href="https://github.com/unrealandychan/rekipedia-releases" target="_blank">GitHub</a>
   </div>
   <a href="#download" class="nav-cta">Download v0.9.3</a>
 </nav>
@@ -371,13 +371,13 @@
     </div>
     <div class="code-body">
       <pre><span class="cmd-comment"># 3 commands to understand any codebase</span>
-<span class="cmd-prompt">$ </span><span class="cmd-text">close-wiki init .</span>
-<span class="cmd-prompt">$ </span><span class="cmd-text">close-wiki scan .</span>
-<span class="cmd-prompt">$ </span><span class="cmd-text">close-wiki ask "How does auth work?"</span>
+<span class="cmd-prompt">$ </span><span class="cmd-text">rekipedia init .</span>
+<span class="cmd-prompt">$ </span><span class="cmd-text">reki scan .</span>
+<span class="cmd-prompt">$ </span><span class="cmd-text">reki ask "How does auth work?"</span>
 
 <span class="cmd-green">✓</span> <span class="cmd-text">Scanning 847 files across 12 modules...</span>
 <span class="cmd-green">✓</span> <span class="cmd-text">Generated 9 wiki pages via PlannerAgent</span>
-<span class="cmd-green">✓</span> <span class="cmd-text">Knowledge store ready at .close-wiki/store.db</span></pre>
+<span class="cmd-green">✓</span> <span class="cmd-text">Knowledge store ready at .rekipedia/store.db</span></pre>
     </div>
   </div>
 </div>
@@ -390,7 +390,7 @@
     <div class="section-label">Features</div>
     <h2>Everything your team needs<br>to understand any codebase</h2>
     <p class="section-desc">
-      From a single binary to a full agentic wiki pipeline — close-wiki works with any LLM, any repo, any team.
+      From a single binary to a full agentic wiki pipeline — rekipedia works with any LLM, any repo, any team.
     </p>
 
     <div class="features-grid">
@@ -454,31 +454,31 @@
 
     <div class="commands-grid">
       <div class="cmd-card">
-        <div class="cmd-name">close-wiki init [repo]</div>
-        <div class="cmd-desc">Scaffold <code style="font-size:12px;color:var(--accent-bright)">.close-wiki/</code> with <code style="font-size:12px;color:var(--accent-bright)">config.yml</code> and update <code style="font-size:12px;color:var(--accent-bright)">.gitignore</code>. Always run first.</div>
+        <div class="cmd-name">rekipedia init [repo]</div>
+        <div class="cmd-desc">Scaffold <code style="font-size:12px;color:var(--accent-bright)">.rekipedia/</code> with <code style="font-size:12px;color:var(--accent-bright)">config.yml</code> and update <code style="font-size:12px;color:var(--accent-bright)">.gitignore</code>. Always run first.</div>
       </div>
       <div class="cmd-card">
-        <div class="cmd-name">close-wiki scan [repo]</div>
+        <div class="cmd-name">reki scan [repo]</div>
         <div class="cmd-desc">Full analysis — extracts symbols, synthesises 3–15 wiki pages via PlannerAgent, exports JSON manifest.</div>
       </div>
       <div class="cmd-card">
-        <div class="cmd-name">close-wiki ask [question]</div>
+        <div class="cmd-name">reki ask [question]</div>
         <div class="cmd-desc">Interactive Q&amp;A REPL with streaming answers. Add <code style="font-size:12px;color:var(--accent-bright)">-q</code> for single-shot mode. Ctrl+C to quit.</div>
       </div>
       <div class="cmd-card">
-        <div class="cmd-name">close-wiki update [repo]</div>
+        <div class="cmd-name">reki update [repo]</div>
         <div class="cmd-desc">Incremental refresh — re-processes only changed files. Falls back to full scan if no previous run exists.</div>
       </div>
       <div class="cmd-card">
-        <div class="cmd-name">close-wiki serve [repo]</div>
+        <div class="cmd-name">reki serve [repo]</div>
         <div class="cmd-desc">Start a local web UI at <code style="font-size:12px;color:var(--accent-bright)">http://127.0.0.1:7070</code> to browse wiki pages and ask questions via browser.</div>
       </div>
       <div class="cmd-card">
-        <div class="cmd-name">close-wiki embed [repo]</div>
+        <div class="cmd-name">reki embed [repo]</div>
         <div class="cmd-desc">Build or rebuild the FAISS semantic search index for hybrid RAG Q&amp;A. Supports any litellm-compatible embed provider.</div>
       </div>
       <div class="cmd-card">
-        <div class="cmd-name">close-wiki export [repo]</div>
+        <div class="cmd-name">rekipedia export [repo]</div>
         <div class="cmd-desc">Bundle the wiki to a single file. Supports <code style="font-size:12px;color:var(--accent-bright)">--format md|zip|json</code> for downstream pipelines.</div>
       </div>
     </div>
@@ -507,11 +507,11 @@
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
           <pre><span class="hl-muted"># macOS &amp; Linux — no Python or Node required</span>
 <span class="hl">brew tap</span> unrealandychan/tap
-<span class="hl">brew install</span> close-wiki
+<span class="hl">brew install</span> rekipedia
 
 <span class="hl-muted"># Get started</span>
-close-wiki init .
-close-wiki scan .</pre>
+rekipedia init .
+reki scan .</pre>
         </div>
       </div>
 
@@ -519,15 +519,15 @@ close-wiki scan .</pre>
         <div class="code-block">
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
           <pre><span class="hl-muted"># Core (scan + serve + ask)</span>
-<span class="hl">pip install</span> close-wiki
+<span class="hl">pip install</span> rekipedia
 <span class="hl-muted"># or with uv (recommended)</span>
-<span class="hl">uv tool install</span> close-wiki
+<span class="hl">uv tool install</span> rekipedia
 
 <span class="hl-muted"># With RAG support (semantic search)</span>
-<span class="hl">pip install</span> "close-wiki[rag]"
+<span class="hl">pip install</span> "rekipedia[rag]"
 
 <span class="hl-muted"># No install — run directly</span>
-<span class="hl">uvx</span> close-wiki scan .</pre>
+<span class="hl">uvx</span> reki scan .</pre>
         </div>
       </div>
 
@@ -535,9 +535,9 @@ close-wiki scan .</pre>
         <div class="code-block">
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
           <pre><span class="hl-muted"># No install required</span>
-<span class="hl">npx</span> close-wiki init .
-<span class="hl">npx</span> close-wiki scan .
-<span class="hl">npx</span> close-wiki ask "How does the auth flow work?"</pre>
+<span class="hl">npx</span> rekipedia init .
+<span class="hl">npx</span> reki scan .
+<span class="hl">npx</span> reki ask "How does the auth flow work?"</pre>
         </div>
       </div>
 
@@ -545,23 +545,23 @@ close-wiki scan .</pre>
         <div class="code-block">
           <button class="copy-btn" onclick="copyCode(this)">Copy</button>
           <pre><span class="hl-muted"># macOS Apple Silicon</span>
-curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_darwin_arm64.tar.gz | tar xz
-<span class="hl">sudo mv</span> close-wiki /usr/local/bin/
+curl -L https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_darwin_arm64.tar.gz | tar xz
+<span class="hl">sudo mv</span> rekipedia /usr/local/bin/
 
 <span class="hl-muted"># macOS Intel</span>
-curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_darwin_amd64.tar.gz | tar xz
-<span class="hl">sudo mv</span> close-wiki /usr/local/bin/
+curl -L https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_darwin_amd64.tar.gz | tar xz
+<span class="hl">sudo mv</span> rekipedia /usr/local/bin/
 
 <span class="hl-muted"># Linux x86_64</span>
-curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_linux_amd64.tar.gz | tar xz
-<span class="hl">sudo mv</span> close-wiki /usr/local/bin/</pre>
+curl -L https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_linux_amd64.tar.gz | tar xz
+<span class="hl">sudo mv</span> rekipedia /usr/local/bin/</pre>
         </div>
       </div>
     </div>
 
     <!-- Config -->
     <div style="margin-top: 40px;">
-      <div style="font-size:13px; font-weight:510; color:var(--text-muted); margin-bottom:12px;">After init, edit <span style="font-family:'JetBrains Mono',monospace; color:var(--accent-bright)">.close-wiki/config.yml</span></div>
+      <div style="font-size:13px; font-weight:510; color:var(--text-muted); margin-bottom:12px;">After init, edit <span style="font-family:'JetBrains Mono',monospace; color:var(--accent-bright)">.rekipedia/config.yml</span></div>
       <div class="code-block">
         <pre><span class="hl-muted">version:</span> 1
 <span class="hl-muted">llm:</span>
@@ -581,7 +581,7 @@ curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/
   <div class="section-inner">
     <div class="section-label">LLM Providers</div>
     <h2>Works with every major LLM</h2>
-    <p class="section-desc">Powered by litellm — any model string that works with litellm works with close-wiki.</p>
+    <p class="section-desc">Powered by litellm — any model string that works with litellm works with rekipedia.</p>
     <div class="providers-grid">
       <div class="provider-card">
         <div class="provider-name">🦙 Ollama</div>
@@ -627,32 +627,32 @@ curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/
       </div>
 
       <div class="download-grid">
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_darwin_arm64.tar.gz" class="dl-card">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_darwin_arm64.tar.gz" class="dl-card">
           <div class="dl-os">🍎 macOS</div>
           <div class="dl-arch">darwin_arm64.tar.gz</div>
           <div class="dl-badge">Apple Silicon (M1/M2/M3)</div>
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_darwin_amd64.tar.gz" class="dl-card">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_darwin_amd64.tar.gz" class="dl-card">
           <div class="dl-os">🍎 macOS</div>
           <div class="dl-arch">darwin_amd64.tar.gz</div>
           <div class="dl-badge">Intel</div>
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_linux_amd64.tar.gz" class="dl-card">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_linux_amd64.tar.gz" class="dl-card">
           <div class="dl-os">🐧 Linux</div>
           <div class="dl-arch">linux_amd64.tar.gz</div>
           <div class="dl-badge">x86_64</div>
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_linux_arm64.tar.gz" class="dl-card">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_linux_arm64.tar.gz" class="dl-card">
           <div class="dl-os">🐧 Linux</div>
           <div class="dl-arch">linux_arm64.tar.gz</div>
           <div class="dl-badge">ARM64</div>
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_windows_amd64.zip" class="dl-card">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/reki_windows_amd64.zip" class="dl-card">
           <div class="dl-os">🪟 Windows</div>
           <div class="dl-arch">windows_amd64.zip</div>
           <div class="dl-badge">x86_64</div>
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/checksums.txt" class="dl-card">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/checksums.txt" class="dl-card">
           <div class="dl-os" style="color:var(--text-muted)">🔒 Checksums</div>
           <div class="dl-arch">checksums.txt</div>
           <div class="dl-badge" style="color:var(--text-muted);background:rgba(255,255,255,0.04);border-color:var(--border)">SHA-256</div>
@@ -660,13 +660,13 @@ curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/
       </div>
 
       <div style="margin-top: 20px; display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_0.9.3_linux_amd64.deb" class="btn-ghost" style="font-size:13px; padding:8px 16px;">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/rekipedia_0.9.3_linux_amd64.deb" class="btn-ghost" style="font-size:13px; padding:8px 16px;">
           .deb (Debian/Ubuntu)
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases/download/v0.9.3/close-wiki_0.9.3_linux_amd64.rpm" class="btn-ghost" style="font-size:13px; padding:8px 16px;">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases/download/v0.9.3/rekipedia_0.9.3_linux_amd64.rpm" class="btn-ghost" style="font-size:13px; padding:8px 16px;">
           .rpm (RHEL/Fedora)
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases/releases" class="btn-ghost" style="font-size:13px; padding:8px 16px;">
+        <a href="https://github.com/unrealandychan/rekipedia-releases/releases" class="btn-ghost" style="font-size:13px; padding:8px 16px;">
           All releases →
         </a>
       </div>
@@ -687,7 +687,7 @@ curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/
         <a href="#download" class="btn-primary" style="font-size:15px; padding:12px 24px;">
           Download v0.9.3
         </a>
-        <a href="https://github.com/unrealandychan/close-wiki-releases" class="btn-ghost" target="_blank" style="font-size:15px; padding:12px 24px;">
+        <a href="https://github.com/unrealandychan/rekipedia-releases" class="btn-ghost" target="_blank" style="font-size:15px; padding:12px 24px;">
           View on GitHub
         </a>
       </div>
@@ -699,12 +699,12 @@ curl -L https://github.com/unrealandychan/close-wiki-releases/releases/download/
 <footer>
   <div style="display:flex; align-items:center; gap:8px; font-weight:510; color:var(--text-muted);">
     <svg width="16" height="16" viewBox="0 0 22 22" fill="none"><rect width="22" height="22" rx="5" fill="#5e6ad2"/><path d="M6 7h10M6 11h7M6 15h9" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
-    close-wiki
+    rekipedia
   </div>
   <div style="display:flex; gap:20px;">
-    <a href="https://github.com/unrealandychan/close-wiki-releases">GitHub</a>
-    <a href="https://github.com/unrealandychan/close-wiki-releases/releases">Releases</a>
-    <a href="https://github.com/unrealandychan/close-wiki-releases/blob/main/README.md">Docs</a>
+    <a href="https://github.com/unrealandychan/rekipedia-releases">GitHub</a>
+    <a href="https://github.com/unrealandychan/rekipedia-releases/releases">Releases</a>
+    <a href="https://github.com/unrealandychan/rekipedia-releases/blob/main/README.md">Docs</a>
   </div>
   <div>Apache 2.0 · Built by <a href="https://github.com/unrealandychan">@unrealandychan</a></div>
 </footer>
